@@ -1,0 +1,93 @@
+
+	h1 {font-size: 4em;}
+	h3 {font-size: 2em;}
+	body {
+		background:#cccccc;  
+		font-family: Arial, Verdana, Tahoma;
+	}
+
+	/*** night mode theme ***/
+	.night-mode {
+		color:#cccccc;
+		background:#333333; 
+	}
+	.night-wrapper {
+		overflow:hidden;
+
+		background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+		background: -o-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+		background: -moz-linear-gradient(right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+		background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+	}
+
+
+	/*** navigation ***/
+	.centered-pills { text-align:center; }
+	.centered-pills ul.nav-pills { display:inline-block; }
+	.centered-pills li { display:inline; }
+	.centered-pills a { float:left; }
+
+
+	/**** tiles ****/
+	.tile-container {
+		margin: 0 auto;
+		width:90%;
+	}
+	.tile-row {
+		display: inline-block;
+	}
+	.tile {
+		width: 200px;
+		height: 160px;	
+		overflow: hidden;
+		max-height: 160px;
+		background-color: white;
+		margin: 15px 15px 15px 15px;
+	}
+	.tile-box-shadow {
+		box-shadow: 10px 10px 5px #555555;
+	}
+	.tile-image-container {
+		height: 110px;
+	}
+	.tile-image {
+		margin-top:30px;
+		width: 50px;
+		height: 50px;	
+	}
+	.tile-footer {
+		position: relative;
+		overflow: hidden;
+		width: 200px;
+		min-height: 50px;
+		max-height: 160px;
+		background-color: black;
+		color: white;
+		text-align: left;
+		text-overflow: ellipsis;
+		padding: 5px;
+
+		/* Set our transitions up.  */
+		-webkit-transition: margin-top 0.8s;
+		-moz-transition: margin-top 0.8s;
+		transition: margin-top 0.8s;	
+	}	
+	.tile-footer:hover {
+    	color: yellow;
+	}
+
+
+	/*** misc ***/
+
+	.center {
+		text-align: center;				
+	}
+	.left {
+		float: left;
+	}
+	.no-wrap {
+		white-space: nowrap; 
+	}	
+
+	
+	

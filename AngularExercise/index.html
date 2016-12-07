@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html ng-app="inMarkitDemo">
+
+<head>
+    <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0'  >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script src="app/js/jQueryMin.js" ></script>
+    <script src="app/js/angular.min.js"></script>
+    <script src="app/app.js"></script>
+
+    <title>InMarkit Demo</title>
+
+</head>
+
+<body ng-controller="tileController as controller" ng-class="{'night-mode': controller.mode == 'instructionsMode'}">
+
+
+ <div id="wrapperDiv" ng-class="{'night-wrapper': controller.mode == 'instructionsMode'}" >
+
+
+ 	<!-- HEADER ==============================   -->
+
+ 	<div id="headerDiv" class="center" >
+	 	<div  >
+	 		<h1 >InMarkit Demo</h1>
+	 		<h3 class="slogan" >InMarkit Connects !</h3>
+	 	</div>
+	 </div>
+
+
+  <!-- MODE SELECTION BUTTONS -->
+      <section class="centered-pills" >
+         <ul class="nav nav-pills">
+            <li ng-class="{ active:controller.mode == 'demoMode' }">
+              <a href ng-click="controller.setDemoMode()">Demo Data</a>
+            </li>
+            <li ng-class="{ active:controller.mode == 'instructionsMode'}">
+              <a href ng-click="controller.setInstructionsMode()">Instructions</a>
+            </li>
+        </ul>
+      </section>
+
+
+   <!-- TILES =========================  -->
+   <div class="tile-container center" ng-show="controller.mode == 'demoMode'">
+        <div ng-repeat="tile in controller.jsonData" class="tile-row" >
+          <tile link-url="{{tile.Link}}" link-name="{{tile.Name}}"></tile>
+        </div>
+    </div>
+
+    <!-- INSTRUCTIONS =========================  -->
+    <div class="instructions-container center" ng-show="controller.mode == 'instructionsMode'">
+      <embed src="assets/instructions.pdf" width="800px" height="2100px" />
+    </div>
+
+
+  <!-- FOOTER =========================  -->
+<footer id="footerDiv" class="center">
+	<span ><br><br>InMarkit Connects!</span>
+</footer>
+
+
+
+
+ <div >   <!-- wrapper -->
+
+
+</body >
+</html>
